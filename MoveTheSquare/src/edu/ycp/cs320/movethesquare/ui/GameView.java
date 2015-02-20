@@ -27,7 +27,6 @@ public class GameView extends JPanel {
 		this.model = model;
 		setPreferredSize(new Dimension((int) model.getWidth(), (int)model.getHeight()));
 		setBackground(MIDNIGHT_BLUE);
-		
 		this.timer = new Timer(1000 / 30, new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -61,8 +60,7 @@ public class GameView extends JPanel {
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g); // paint background
 		
-		g.setColor(Color.GREEN);
-
+		g.setColor(Color.MAGENTA);
 		Square square = model.getSquare();
 		
 		g.fillRect((int) square.getX(), (int) square.getY(), (int) square.getWidth(), (int) square.getHeight());
